@@ -1,5 +1,7 @@
 package com.kylee.model;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -89,6 +91,12 @@ public class Story {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+
+    public String toString() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        return gson.toJson(this);
     }
 }
 

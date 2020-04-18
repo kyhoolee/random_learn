@@ -5,7 +5,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class HrefTitle {
+public class HrefTitleDate {
+
+    @SerializedName("date")
+    @Expose
+    private String date;
     @SerializedName("href")
     @Expose
     private String href;
@@ -13,21 +17,24 @@ public class HrefTitle {
     @Expose
     private String title;
 
+    public String getDate() {
+        return date;
+    }
 
-    // Getter Methods
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getHref() {
         return href;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    // Setter Methods
-
     public void setHref(String href) {
         this.href = href;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public void setTitle(String title) {
